@@ -223,6 +223,13 @@ en:
       delete_confirm: "Are you sure?"
       title_new: "New %{name}"
       title_edit: "Editing %{name}"
+    books:
+      pagination:
+        first: "« FIRST"
+        last: "LAST »"
+        previous: "‹ PREV"
+        next: "NEXT ›"
+        truncate: "…"
   controllers:
     common:
       notice_create: "%{name} was successfully created."
