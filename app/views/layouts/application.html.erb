@@ -11,5 +11,9 @@
 
   <body>
     <%= yield %>
+    <div class = "change_language" >
+      <%= link_to t(".english"), locale:"en" %>
+      <%= link_to t(".japanese"), locale:"ja" %>
+    </div>
   </body>
 </html>
