@@ -7,9 +7,7 @@ class User < ApplicationRecord
 
   def icon_thumbnail
     if icon.attached?
-      icon.variant(resize: "150x150!").processed
-    else
-      ""
+      icon.variant(resize_to_fit: [150,150]).processed
     end
   end
 end
