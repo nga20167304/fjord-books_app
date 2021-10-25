@@ -11,11 +11,6 @@
   <%= render 'devise/registrations/profile_fields', f: f %>
 
   <div class="field">
-    <%= f.label :icon %>
-    <%= f.file_field :icon %>
-  </div>
-
-  <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= t('views.common.minimum_length', length: @minimum_password_length) %>)</em>
