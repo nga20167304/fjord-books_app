@@ -1,39 +1,24 @@
 en:
   activerecord:
     models:
-      book: "Book"
+      book:
+        one: "Book"
+        other: "Books"
     attributes:
       book:
         title: "Title"
         memo: "Memo"
         author: "Author"
         picture: "Picture"
-  books:
-    edit:
-      edit: "Edit"
+  views:
+    common:
       show: "Show"
       back: "Back"
-    index:
-      books: "Books"
-      title: "Title"
-      memo: "Memo"
-      author: "Author"
-      picture: "Picture"
-      show: "Show"
       edit: "Edit"
-      destroy: "Destroy"
+      destroy: "Delete"
       new_book: "New book"
       confirm_message: "Are you sure?"
-    new:
-      new_book: "New book"
-      back: "Back"
-    show:
-      title: "Title"
-      memo: "Memo"
-      author: "Author"
-      picture: "Picture"
-      back: "Back"
-      edit: "Edit"
+      title_edit: "Edit Book"
   layouts:
     application:
       english: "English"
