@@ -219,7 +219,7 @@ ja:
       sign_out: ログアウト
       minimum_length: "%{length}文字以上"
       new_report: "新しい日報"
-      create: "作成"
+      create_comment: "コメントする"
       comment: "コメント"
     pagination:
       first: '最初'

@@ -227,7 +227,7 @@ en:
       sign_out: "Sign out"
       minimum_length: "%{length} characters minimum"
       new_report: "New report"
-      create: "Create"
+      create_comment: "Comment"
       comment: "Comment"
     pagination:
       first: First
