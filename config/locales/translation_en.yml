@@ -2,7 +2,8 @@ en:
   activerecord:
     models:
       book: Book  #g
-
+      user: User
+      report: Report
     attributes:
       book:
         author: Author  #g
@@ -15,3 +16,8 @@ en:
         address: Address
         self_introduction: Self introduction
         avatar: "User image"
+      report:
+        title: Title
+        content: Content
+      comment:
+        content: Content

@@ -1,0 +1,5 @@
+<div><%= t('views.common.comment') %></div>
+<%= form_with model: [commentable, commentable.comments.new], local: true do |f| %>
+  <%= f.text_field :content, required: true %>
+  <%= f.submit t('views.common.create') %>
+<% end %>

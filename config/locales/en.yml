@@ -226,6 +226,9 @@ en:
       title_show: "%{name} Details"
       sign_out: "Sign out"
       minimum_length: "%{length} characters minimum"
+      new_report: "New report"
+      create: "Create"
+      comment: "Comment"
     pagination:
       first: First
       last: Last
