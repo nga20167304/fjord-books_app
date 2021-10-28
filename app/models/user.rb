@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_many :followings, through: :active_relationships, source: :following
 
   has_many :passive_relationships, class_name:'FollowRelationship', foreign_key: :following_id, dependent: :destroy
-  has_many :followers, through: :active_relationships, source: :follower
+  has_many :followers, through: :passive_relationships, source: :follower
 
   def follow(other_user)
     followings << other_user
