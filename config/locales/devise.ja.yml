@@ -36,6 +36,9 @@ ja:
       send_paranoid_instructions: "あなたのメールアドレスが私たちのデータベースに存在する場合、あなたは数分であなたのメールアドレスにパスワード回復リンクを受け取ります。"
       updated: "パスワードが正常に変更されました。 これでサインインしました。"
       updated_not_active: "パスワードが正常に変更されました。"
+      new:
+        forgot_your_password: "自分のパスワードを忘れ"
+        send_me_reset_password_instructions: "パスワードのリセット手順を送ってください"
     registrations:
       destroyed: "さよなら！ アカウントは正常にキャンセルされました。 またお会いできることを楽しみにしております。"
       signed_up: "いらっしゃいませ！ サインアップに成功しました。"
@@ -45,14 +48,32 @@ ja:
       update_needs_confirmation: "アカウントは正常に更新されましたが、新しいメールアドレスを確認する必要があります。 メールを確認し、確認リンクをたどって新しいメールアドレスを確認してください。"
       updated: "アカウントが正常に更新されました。"
       updated_but_not_signed_in: "アカウントは正常に更新されましたが、パスワードが変更されたため、再度サインインする必要があります。"
+      new:
+        sign_up: "サインアップ"
+      edit:
+        update: "アップデート"
+        title: "編集"
+        leave_blank_if_you_don_t_want_to_change_it: "変更したくない場合は空白のままにします"
+        we_need_your_current_password_to_confirm_your_changes: "変更を確認するには、現在のパスワードが必要です"
+        cancel_my_account: "アカウントをキャンセルする"
+        unhappy: "不幸"
     sessions:
       signed_in: "正常にサインインしました。"
       signed_out: "正常にサインアウトしました。"
       already_signed_out: "正常にサインアウトしました。"
+      new:
+        sign_in: "ログイン"
     unlocks:
       send_instructions: "数分でアカウントのロックを解除する方法の説明が記載されたメールが届きます。"
       send_paranoid_instructions: "アカウントが存在する場合は、数分でロックを解除する方法が記載されたメールが届きます。"
       unlocked: "アカウントのロックが正常に解除されました。 続行するにはサインインしてください。"
+    shared:
+      minimum_password_length: "パスワードの最小長"
+      links:
+        sign_in: "ログイン"
+        sign_up: "サインアップ"
+        forgot_your_password: "パスワードを忘れ"
+        back: "戻る"
   errors:
     messages:
       already_confirmed: "すでに確認済みですので、サインインしてみてください"
