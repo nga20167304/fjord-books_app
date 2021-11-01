@@ -8,8 +8,7 @@ class UsersController < ApplicationController
     @users = User.order(:id).page(params[:page])
   end
 
-  def show;
-  end
+  def show; end
 
   private
 
