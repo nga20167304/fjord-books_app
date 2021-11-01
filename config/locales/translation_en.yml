@@ -13,7 +13,7 @@ en:
         email: Email  #g
         address: Address  #g
         postal_code: Postal code  #g
-        bio: Bio  #g
+        self_introduction: Self introduction  #g
         password: Password  #g
         password_confirmation: Password confirmation  #g
         remember_me: Remember me

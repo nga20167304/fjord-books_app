@@ -13,7 +13,7 @@ ja:
         email: メール  #g
         address: 住所  #g
         postal_code: 郵便番号  #g
-        bio: 自己紹介文  #g
+        self_introduction: 自己紹介文  #g
         password: パスワード  #g
         password_confirmation: 確認パスワード  #g
         remember_me: 私を記憶
