@@ -7,8 +7,7 @@ class UsersController < ApplicationController
     @users = User.with_attached_avatar.order(:id).page(params[:page])
   end
 
-  def show
-  end
+  def show; end
 
   def following
     @followings = @user.followings
@@ -19,7 +18,7 @@ class UsersController < ApplicationController
   end
 
   private
-  
+
   def find_user
     @user = User.find(params[:id])
   end
