@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-  before_action :find_user, only: %i[show following follower]
+  before_action :find_user, only: %i[show following followers]
 
   def index
     @users = User.with_attached_avatar.order(:id).page(params[:page])
@@ -10,11 +10,13 @@ class UsersController < ApplicationController
   def show; end
 
   def following
-    @followings = @user.followings
+    @users = @user.followings.order(:id).page(params[:page])
+    render :index
   end
 
-  def follower
-    @followers = @user.followers
+  def followers
+    @users = @user.followers.order(:id).page(params[:page])
+    render :index
   end
 
   private
