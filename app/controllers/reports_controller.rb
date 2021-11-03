@@ -1,13 +1,13 @@
+# frozen_string_literal: true
+
 class ReportsController < ApplicationController
-  before_action :current_report, only: [:show, :edit, :update, :destroy]
+  before_action :current_report, only: %i[show edit update destroy]
 
   def index
     @reports = Report.order(:id).page(params[:page])
   end
 
-  def show
-
-  end
+  def show; end
 
   def new
     @report = Report.new
@@ -15,7 +15,7 @@ class ReportsController < ApplicationController
 
   def create
     @report = current_user.reports.create(report_params)
-    
+
     if @report.save
       redirect_to @report
     else
@@ -23,9 +23,7 @@ class ReportsController < ApplicationController
     end
   end
 
-  def edit
-
-  end
+  def edit; end
 
   def update
     @report.update(report_params)

@@ -221,6 +221,7 @@ ja:
       new_report: "新しい日報"
       create_comment: "コメントする"
       comment: "コメント"
+      no_comment: "誰もコメントしない"
     pagination:
       first: '最初'
       last: '最後'
