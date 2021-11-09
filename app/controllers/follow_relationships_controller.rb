@@ -5,7 +5,7 @@ class FollowRelationshipsController < ApplicationController
   def create
     current_user.follow(@user)
     respond_to do |format|
-      format.html { redirect_to @user }
+      redirect_to @user
       format.js
     end
   end
@@ -13,7 +13,7 @@ class FollowRelationshipsController < ApplicationController
   def destroy
     current_user.unfollow(@user)
     respond_to do |format|
-      format.html { redirect_to @user }
+      redirect_to @user
       format.js
     end
   end
