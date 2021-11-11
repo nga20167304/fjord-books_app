@@ -29,14 +29,13 @@ class BooksTest < ApplicationSystemTestCase
   test 'creating a Book' do
     click_on '新規作成'
 
-    fill_in 'タイトル', with: @book.title
-    fill_in 'メモ', with: @book.memo
-    fill_in '著者', with: @book.author
+    fill_in 'タイトル', with: '本のタイトル'
+    fill_in 'メモ', with: '本のメモ'
+    fill_in '著者', with: '本の著者'
     attach_file '画像', Rails.root.join('test/fixtures/files/book.jpg')
     click_on '登録する'
 
     assert_text '本が作成されました。'
-    click_on '戻る'
   end
 
   test 'updating a Book' do
