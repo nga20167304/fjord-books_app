@@ -21,6 +21,11 @@ class BooksTest < ApplicationSystemTestCase
     assert_selector 'h1', text: '本'
   end
 
+  test 'visiting the show' do
+    click_on '詳細'
+    assert_selector 'h1', text: '本の詳細'
+  end
+
   test 'creating a Book' do
     click_on '新規作成'
 
