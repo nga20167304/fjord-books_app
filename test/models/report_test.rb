@@ -9,12 +9,12 @@ class ReportTest < ActiveSupport::TestCase
     @report = FactoryBot.create(:report, user_id: @user1.id)
   end
 
-  test "#editable?" do
+  test '#editable?' do
     assert @report.editable?(@user1)
     assert_not @report.editable?(@user2)
   end
 
-  test "#created_on" do
+  test '#created_on' do
     assert_equal Date.current, @report.created_on
   end
 end

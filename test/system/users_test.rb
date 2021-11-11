@@ -16,7 +16,7 @@ class UsersTest < ApplicationSystemTestCase
     visit users_url
   end
 
-  test 'visiting the index, then visting the show' do
+  test 'visiting the index' do
     assert_selector 'h1', text: 'ユーザ'
   end
 
@@ -36,6 +36,11 @@ class UsersTest < ApplicationSystemTestCase
     assert_text 'フォロー解除しました。'
   end
 
+  test 'logout' do
+    click_on 'ログアウト'
+    assert_text 'ログアウトしました。'
+  end
+
   test 'edit user' do
     click_on 'アカウント編集'
     assert_selector 'h2', text: 'アカウント編集'
@@ -47,7 +52,7 @@ class UsersTest < ApplicationSystemTestCase
     fill_in 'パスワード', with: 'password123'
     fill_in 'パスワード（確認用）', with: 'password123'
     fill_in '現在のパスワード', with: 'password'
-    
+
     click_on '更新'
     assert_text 'アカウント情報を変更しました。'
   end
