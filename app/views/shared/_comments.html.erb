@@ -5,7 +5,7 @@
       <% commentable.comments.order(:id).includes(:user).each do |comment| %>
         <li>
           <%= comment.content %>
-          <%= comment.user.name %>によるコメント
+          <%= comment.user.name %><%= t('views.common.commented_by') %>
           <small>
             <%= l comment.created_at, format: :short %>で
           </small>
@@ -13,7 +13,7 @@
       <% end %>
     </ul>
   <% else %>
-    <%= t('views.common.no_comments') %>
+    <%= t('views.common.no_comment') %>
   <% end %>
 </div>
 

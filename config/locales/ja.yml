@@ -222,6 +222,7 @@ ja:
       create_comment: "コメントする"
       comment: "コメント"
       no_comment: "誰もコメントしない"
+      commented_by: によるコメント
     pagination:
       first: '最初'
       last: '最後'
