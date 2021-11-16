@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class ReportsController < ApplicationController
-  before_action :current_report, only: %i[show edit update destroy]
+  before_action :current_report, only: %i[edit update destroy]
 
   def index
     @reports = Report.order(:id).page(params[:page])
@@ -44,6 +44,6 @@ class ReportsController < ApplicationController
   end
 
   def current_report
-    @report = Report.find(params[:id])
+    @report = current_user.reports.find(params[:id])
   end
 end
