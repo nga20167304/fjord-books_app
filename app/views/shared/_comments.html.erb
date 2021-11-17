@@ -1,0 +1,23 @@
+<div><h3><%= t('views.common.comment') %><h3></div>
+<div class="comments-list">
+  <% if commentable.comments.present? %>
+    <ul>
+      <% commentable.comments.order(:id).includes(:user).each do |comment| %>
+        <li>
+          <%= comment.content %>
+          <%= comment.user.name %><%= t('views.common.commented_by') %>
+          <small>
+            <%= l comment.created_at, format: :short %>で
+          </small>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <%= t('views.common.no_comment') %>
+  <% end %>
+</div>
+
+<%= form_with model: [commentable, commentable.comments.new], local: true do |f| %>
+  <%= f.text_field :content, required: true %>
+  <%= f.submit t('views.common.create_comment') %>
+<% end %>
