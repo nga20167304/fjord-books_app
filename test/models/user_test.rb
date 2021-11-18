@@ -6,7 +6,6 @@ class UserTest < ActiveSupport::TestCase
   setup do
     @user1 = FactoryBot.create(:user)
     @user2 = FactoryBot.create(:user)
-    @user1.follow(@user2)
   end
 
   test '#name_or_email' do
@@ -17,22 +16,31 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test '#following?' do
+    assert_equal @user1.followings.count, 0
+    @user1.follow(@user2)
     assert @user1.following?(@user2)
     assert_not @user2.following?(@user1)
   end
 
   test '#followed_by?' do
+    assert_equal @user1.followings.count, 0
+    @user1.follow(@user2)
     assert @user2.followed_by?(@user1)
     assert_not @user1.followed_by?(@user2)
   end
 
   test '#follow' do
+    @user1.follow(@user2)
+    assert_equal @user1.followings.count, 1
+    assert_equal @user2.followers.count, 1
     assert @user1.following?(@user2)
     assert @user2.followed_by?(@user1)
   end
 
   test '#unfollow' do
     @user1.unfollow(@user2)
+    assert_equal @user1.followings.count, 0
+    assert_equal @user2.followers.count, 0
     assert_not @user1.following?(@user2)
     assert_not @user2.followed_by?(@user1)
   end

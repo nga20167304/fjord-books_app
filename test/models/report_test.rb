@@ -15,6 +15,7 @@ class ReportTest < ActiveSupport::TestCase
   end
 
   test '#created_on' do
+    travel_to @report.created_on
     assert_equal Date.current, @report.created_on
   end
 end
