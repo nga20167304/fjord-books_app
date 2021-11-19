@@ -16,15 +16,13 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test '#following?' do
-    assert_equal @user1.followings.count, 0
-    @user1.follow(@user2)
+    @user1.followings << @user2
     assert @user1.following?(@user2)
     assert_not @user2.following?(@user1)
   end
 
   test '#followed_by?' do
-    assert_equal @user1.followings.count, 0
-    @user1.follow(@user2)
+    @user2.followers << @user1
     assert @user2.followed_by?(@user1)
     assert_not @user1.followed_by?(@user2)
   end
