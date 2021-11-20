@@ -31,11 +31,15 @@ class UserTest < ActiveSupport::TestCase
     @user1.follow(@user2)
     assert_equal @user1.followings.count, 1
     assert_equal @user2.followers.count, 1
+    assert @user2, @user1.followings
+    assert @user1, @user2.followers
   end
 
   test '#unfollow' do
     @user1.unfollow(@user2)
     assert_equal @user1.followings.count, 0
     assert_equal @user2.followers.count, 0
+    assert [], @user1.followings
+    assert [], @user2.followers
   end
 end
